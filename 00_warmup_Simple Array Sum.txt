@@ -1,0 +1,31 @@
+// Given an array of N integers, can you find the sum of its elements?
+
+// in this problem, I am using vector<int> rather than an array
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int simpleArraySum(int n, vector <int> ar) {
+    // Complete this function
+    
+    int sum = 0;
+       for(int ar_i = 0; ar_i < n; ar_i++){
+       sum = sum + ar[ar_i];
+    }
+    return sum;
+}
+
+int main() {
+    int n;
+    cin >> n;
+    vector<int> ar(n);
+    
+    // inputting the array elements one by one
+    for(int ar_i = 0; ar_i < n; ar_i++){
+       cin >> ar[ar_i];
+    }
+    
+    int result = simpleArraySum(n, ar);
+    cout << result << endl;
+    return 0;
+}
